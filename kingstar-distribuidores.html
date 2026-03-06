@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidores Kingstar | Equipo de Cocina Industrial</title>
+    <meta name="description" content="Conviértete en distribuidor de equipos Kingstar y ofrece soluciones profesionales para restaurantes, hoteles y negocios gastronómicos.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --negro: #0d0d0d;
+            --negro-card: #141414;
+            --gris-oscuro: #1a1a1a;
+            --gris-borde: #2a2a2a;
+            --gris-texto: #888;
+            --gris-claro: #f5f5f5;
+            --blanco: #ffffff;
+            --rojo: #d10e12;
+            --rojo-hover: #ad0b0f;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--blanco);
+            background: var(--negro);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            padding: 0 60px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fcfcfc;
+            transition: box-shadow 0.3s;
+        }
+
+        nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 64px; width: auto; }
+        .nav-logo-text {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--negro);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+        .nav-logo-text span { color: var(--rojo); }
+
+        .nav-center { display: flex; gap: 36px; list-style: none; }
+        .nav-center a {
+            text-decoration: none;
+            color: rgba(0,0,0,0.5);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-center a:hover { color: var(--negro); }
+
+        .nav-cta-btn {
+            padding: 10px 24px;
+            background: var(--rojo);
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .nav-cta-btn:hover { background: var(--rojo-hover); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('CHEF  (1).png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.7) 50%, rgba(13,13,13,0.4) 100%);
+        }
+
+        .hero-content {
+            position: relative; z-index: 2;
+            padding: 120px 60px 70px;
+            max-width: 720px;
+        }
+
+        .hero-tag {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .hero-tag-line { width: 40px; height: 2px; background: var(--rojo); }
+
+        .hero-tag-text {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rojo);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 5.5vw, 68px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 .red { color: var(--rojo); }
+
+        .hero-km-logo {
+            height: 0.65em;
+            width: auto;
+            vertical-align: baseline;
+            margin-left: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 520px;
+        }
+
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--rojo);
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover { background: var(--rojo-hover); transform: translateY(-1px); }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.25);
+            cursor: pointer;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+        .btn-secondary:hover { border-color: var(--blanco); transform: translateY(-1px); }
+
+        /* ===== SECTIONS COMMON ===== */
+        .section-padding { padding: 100px 60px; }
+
+        .section-tag {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-tag-line { width: 32px; height: 2px; background: var(--rojo); }
+
+        .section-tag-text {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rojo);
+        }
+
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        /* ===== BENEFICIOS ===== */
+        .beneficios { background: var(--blanco); color: var(--negro); }
+        .beneficios .section-subtitle { color: rgba(0,0,0,0.5); }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 60px;
+        }
+
+        .beneficio-card {
+            padding: 40px 32px;
+            border-right: 1px solid rgba(0,0,0,0.08);
+            position: relative;
+            transition: background 0.3s;
+        }
+
+        .beneficio-card:last-child { border-right: none; }
+
+        .beneficio-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--rojo);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .beneficio-card:hover::before { transform: scaleX(1); }
+        .beneficio-card:hover { background: rgba(0,0,0,0.02); }
+
+        .beneficio-num {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--rojo);
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .beneficio-icon {
+            width: 48px; height: 48px;
+            background: var(--negro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .beneficio-icon svg { width: 22px; height: 22px; fill: var(--blanco); }
+
+        .beneficio-title {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            line-height: 1.3;
+        }
+
+        .beneficio-desc {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(0,0,0,0.5);
+            line-height: 1.7;
+        }
+
+        /* ===== PORTAFOLIO ===== */
+        .portafolio { background: var(--gris-oscuro); }
+
+        .portafolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .portafolio-card {
+            position: relative;
+            background: var(--negro-card);
+            padding: 48px 36px;
+            overflow: hidden;
+            transition: background 0.3s;
+            cursor: default;
+        }
+
+        .portafolio-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 3px; height: 100%;
+            background: var(--rojo);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s ease;
+        }
+
+        .portafolio-card:hover::before { transform: scaleY(1); }
+        .portafolio-card:hover { background: #1a1a1a; }
+
+        .portafolio-icon {
+            width: 44px; height: 44px;
+            border: 1px solid var(--gris-borde);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            transition: border-color 0.3s;
+        }
+
+        .portafolio-card:hover .portafolio-icon { border-color: var(--rojo); }
+
+        .portafolio-icon svg { width: 20px; height: 20px; fill: var(--blanco); }
+
+        .portafolio-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .portafolio-desc {
+            font-size: 12px;
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+
+        /* ===== PERFIL ===== */
+        .perfil { background: var(--blanco); color: var(--negro); }
+        .perfil .section-subtitle { color: rgba(0,0,0,0.5); }
+
+        .perfil-content {
+            display: flex;
+            gap: 80px;
+            margin-top: 60px;
+            align-items: flex-start;
+        }
+
+        .perfil-list { flex: 1; }
+
+        .perfil-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .perfil-check {
+            width: 28px; height: 28px;
+            background: var(--rojo);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .perfil-check svg { width: 14px; height: 14px; fill: var(--blanco); }
+
+        .perfil-item-text {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .perfil-card {
+            flex: 0 0 360px;
+            background: var(--negro);
+            color: var(--blanco);
+            padding: 48px 40px;
+        }
+
+        .perfil-card-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rojo);
+            margin-bottom: 20px;
+        }
+
+        .perfil-card-title {
+            font-size: 22px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .perfil-card-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .perfil-card-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--rojo);
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .perfil-card-btn:hover { background: var(--rojo-hover); }
+
+        /* ===== PROCESO ===== */
+        .proceso { background: var(--negro); }
+
+        .proceso-timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .proceso-timeline::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            right: 24px;
+            height: 2px;
+            background: var(--rojo);
+        }
+
+        .proceso-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .proceso-circle {
+            width: 48px; height: 48px;
+            background: var(--negro);
+            border: 2px solid var(--rojo);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            position: relative;
+            z-index: 2;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .proceso-step:hover .proceso-circle {
+            background: var(--rojo);
+            transform: scale(1.1);
+        }
+
+        .proceso-num {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--rojo);
+            transition: color 0.3s;
+        }
+
+        .proceso-step:hover .proceso-num { color: var(--blanco); }
+
+        .proceso-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .proceso-desc {
+            font-size: 12px;
+            color: var(--gris-texto);
+            line-height: 1.6;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        /* ===== FORMULARIO ===== */
+        .contacto { background: var(--gris-oscuro); }
+
+        .contacto-wrapper {
+            display: flex;
+            gap: 60px;
+            margin-top: 60px;
+            align-items: flex-start;
+        }
+
+        .contacto-info {
+            flex: 0 0 360px;
+        }
+
+        .contacto-info-title {
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .contacto-info-text {
+            font-size: 14px;
+            color: var(--gris-texto);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .contacto-dato {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .contacto-dato-icon {
+            width: 36px; height: 36px;
+            border: 1px solid var(--gris-borde);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contacto-dato-icon svg { width: 16px; height: 16px; fill: var(--rojo); }
+
+        .contacto-dato-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contacto-form-card {
+            flex: 1;
+            background: var(--blanco);
+            padding: 48px;
+        }
+
+        .contacto-form-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--negro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { grid-column: 1 / -1; }
+
+        .form-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0,0,0,0.4);
+            margin-bottom: 8px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 14px 16px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: var(--gris-claro);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--negro);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--rojo);
+        }
+
+        .form-select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        .form-textarea { resize: vertical; min-height: 100px; }
+
+        .form-submit {
+            margin-top: 8px;
+            padding: 16px 40px;
+            background: var(--rojo);
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        .form-submit:hover { background: var(--rojo-hover); }
+
+        /* ===== CONFIANZA ===== */
+        .confianza {
+            background: var(--rojo);
+            text-align: center;
+        }
+
+        .confianza-text {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 700;
+            line-height: 1.4;
+            max-width: 700px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--negro);
+            padding: 48px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--gris-borde);
+        }
+
+        .footer-logo { display: flex; align-items: center; gap: 10px; }
+        .footer-logo-text {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--blanco);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-logo-text span { color: var(--rojo); }
+
+        .footer-copy {
+            font-size: 11px;
+            color: var(--gris-texto);
+        }
+
+        .footer-links { display: flex; gap: 28px; }
+        .footer-links a {
+            font-size: 11px;
+            color: var(--gris-texto);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--blanco); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+            .beneficio-card { border-bottom: 1px solid rgba(0,0,0,0.08); }
+            .beneficio-card:nth-child(2n) { border-right: none; }
+            .perfil-content { flex-direction: column; gap: 40px; }
+            .perfil-card { flex: none; width: 100%; }
+            .contacto-wrapper { flex-direction: column; }
+            .contacto-info { flex: none; width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 24px; }
+            .nav-center { display: none; }
+            .hero-content { padding: 120px 24px 80px; }
+            .section-padding { padding: 80px 24px; }
+            .beneficios-grid { grid-template-columns: 1fr; }
+            .beneficio-card { border-right: none; }
+            .portafolio-grid { grid-template-columns: 1fr; }
+            .proceso-timeline { flex-direction: column; gap: 40px; }
+            .proceso-timeline::before {
+                top: 24px; bottom: 24px;
+                left: 24px; right: auto;
+                width: 2px; height: auto;
+            }
+            .proceso-step { text-align: left; display: flex; gap: 20px; align-items: flex-start; padding: 0; }
+            .proceso-circle { margin: 0; flex-shrink: 0; }
+            .proceso-desc { margin: 0; }
+            .form-grid { grid-template-columns: 1fr; }
+            .contacto-form-card { padding: 32px 24px; }
+            .hero-buttons { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            footer { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a class="nav-logo" href="#">
+            <img src="LOGOS GENERAL completo (7).png" alt="KingStar">
+        </a>
+        <ul class="nav-center">
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#portafolio">Productos</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="nav-cta-btn" href="#contacto">Solicitar Informacion</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CONVIERTETE EN<br>DISTRIBUIDOR<br><span class="red">KINGSTAR</span> <img src="Banner shopify KM (17).png" alt="KingStar isotipo" class="hero-km-logo"></h1>
+            <p class="hero-subtitle">Expande tu negocio ofreciendo equipos profesionales de cocina industrial utilizados por restaurantes, hoteles y negocios de alimentos en todo Mexico.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary">
+                    Solicitar Informacion
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1l7 7-7 7-1.4-1.4L11.2 9H1V7h10.2L6.6 2.4z"/></svg>
+                </a>
+                <a href="#" class="btn-secondary">
+                    Descargar Catalogo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 12L3 7h3V1h4v6h3L8 12zM2 14h12v1H2v-1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios section-padding" id="beneficios">
+        <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">Ventajas exclusivas</span>
+        </div>
+        <h2 class="section-title" style="color: var(--negro);">POR QUE SER<br>DISTRIBUIDOR <span style="color: var(--rojo);">KINGSTAR</span></h2>
+
+        <div class="beneficios-grid">
+            <div class="beneficio-card">
+                <div class="beneficio-num">01</div>
+                <div class="beneficio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+                </div>
+                <h3 class="beneficio-title">Precios preferenciales</h3>
+                <p class="beneficio-desc">Accede a precios especiales para distribuidores con margenes competitivos.</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-num">02</div>
+                <div class="beneficio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H2v13c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6h-6zm-6-2h4v2h-4V4zm10 15H4V8h16v11z"/></svg>
+                </div>
+                <h3 class="beneficio-title">Productos de alta demanda</h3>
+                <p class="beneficio-desc">Equipos profesionales utilizados por restaurantes, cafeterias, hoteles y negocios gastronomicos.</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-num">03</div>
+                <div class="beneficio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V5h16v14zm-8-2h2v-4h4v-2h-4V7h-2v4H8v2h4z"/></svg>
+                </div>
+                <h3 class="beneficio-title">Disponibilidad constante</h3>
+                <p class="beneficio-desc">Amplio inventario y tiempos de entrega confiables.</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-num">04</div>
+                <div class="beneficio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h3 class="beneficio-title">Soporte comercial</h3>
+                <p class="beneficio-desc">Material de venta, fichas tecnicas y acompanamiento comercial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section class="portafolio section-padding" id="portafolio">
+        <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">Catalogo</span>
+        </div>
+        <h2 class="section-title">EQUIPOS QUE PODRAS<br><span style="color: var(--rojo);">COMERCIALIZAR</span></h2>
+        <p class="section-subtitle" style="color: var(--gris-texto);">Kingstar ofrece una amplia gama de equipos disenados para cocinas profesionales.</p>
+
+        <div class="portafolio-grid">
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Hornos industriales</h3>
+                <p class="portafolio-desc">Hornos de conveccion, de piso y combinados para alta produccion.</p>
+            </div>
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h12v16zm-7-2h2v-5h3l-4-7-4 7h3z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Freidoras profesionales</h3>
+                <p class="portafolio-desc">Freidoras de alto rendimiento con control preciso de temperatura.</p>
+            </div>
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M2 21h20v-2H2v2zm0-4h20v-2H2v2zm0-4h20v-2H2v2zm0-4h20V7H2v2zm0-6v2h20V3H2z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Parrillas y planchas</h3>
+                <p class="portafolio-desc">Planchas, parrillas y asadores para cocina profesional.</p>
+            </div>
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 9V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v4c-1.1 0-2 .9-2 2v5h1.33L4 19h1l.67-3h12.67l.66 3h1l.67-3H22v-5c0-1.1-.9-2-2-2zm-2 0H6V5h12v4z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Equipos de refrigeracion</h3>
+                <p class="portafolio-desc">Refrigeradores, congeladores y mesas frias industriales.</p>
+            </div>
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Mesas de preparacion</h3>
+                <p class="portafolio-desc">Mesas de trabajo, tarjas y estaciones de preparacion en acero inoxidable.</p>
+            </div>
+            <div class="portafolio-card">
+                <div class="portafolio-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm3-6c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/></svg>
+                </div>
+                <h3 class="portafolio-title">Equipos de acero inoxidable</h3>
+                <p class="portafolio-desc">Mobiliario y accesorios fabricados en acero inoxidable grado comercial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFIL DEL DISTRIBUIDOR -->
+    <section class="perfil section-padding" id="perfil">
+        <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">Requisitos</span>
+        </div>
+        <h2 class="section-title" style="color: var(--negro);">QUIEN PUEDE SER<br><span style="color: var(--rojo);">DISTRIBUIDOR</span></h2>
+        <p class="section-subtitle">Buscamos empresas o profesionales que trabajen en:</p>
+
+        <div class="perfil-content">
+            <div class="perfil-list">
+                <div class="perfil-item">
+                    <div class="perfil-check">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="perfil-item-text">Venta de equipo para restaurantes</span>
+                </div>
+                <div class="perfil-item">
+                    <div class="perfil-check">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="perfil-item-text">Proveedores para hoteles</span>
+                </div>
+                <div class="perfil-item">
+                    <div class="perfil-check">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="perfil-item-text">Distribuidores gastronomicos</span>
+                </div>
+                <div class="perfil-item">
+                    <div class="perfil-check">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="perfil-item-text">Instaladores de cocinas industriales</span>
+                </div>
+                <div class="perfil-item">
+                    <div class="perfil-check">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="perfil-item-text">Comercializadores de equipo industrial</span>
+                </div>
+            </div>
+
+            <div class="perfil-card">
+                <div class="perfil-card-tag">Red de distribuidores</div>
+                <h3 class="perfil-card-title">Forma parte de Kingstar</h3>
+                <p class="perfil-card-desc">Unete a nuestra red de distribuidores autorizados y accede a beneficios exclusivos, soporte comercial y margenes competitivos.</p>
+                <a href="#contacto" class="perfil-card-btn">Aplicar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="proceso section-padding" id="proceso">
+        <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">Como funciona</span>
+        </div>
+        <h2 class="section-title">PROCESO DE<br><span style="color: var(--rojo);">REGISTRO</span></h2>
+
+        <div class="proceso-timeline">
+            <div class="proceso-step">
+                <div class="proceso-circle">
+                    <span class="proceso-num">01</span>
+                </div>
+                <h3 class="proceso-title">Completa tu solicitud</h3>
+                <p class="proceso-desc">Llena el formulario con la informacion de tu empresa y experiencia en el sector.</p>
+            </div>
+            <div class="proceso-step">
+                <div class="proceso-circle">
+                    <span class="proceso-num">02</span>
+                </div>
+                <h3 class="proceso-title">Revision de informacion</h3>
+                <p class="proceso-desc">Nuestro equipo comercial revisara tu perfil y te contactara para validar los detalles.</p>
+            </div>
+            <div class="proceso-step">
+                <div class="proceso-circle">
+                    <span class="proceso-num">03</span>
+                </div>
+                <h3 class="proceso-title">Comienza a distribuir</h3>
+                <p class="proceso-desc">Recibe aprobacion, accede a precios preferenciales y comienza a distribuir Kingstar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="contacto section-padding" id="contacto">
+        <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">Registro</span>
+        </div>
+        <h2 class="section-title">SOLICITA SER<br><span style="color: var(--rojo);">DISTRIBUIDOR</span></h2>
+
+        <div class="contacto-wrapper">
+            <div class="contacto-info">
+                <h3 class="contacto-info-title">Estamos listos para trabajar contigo</h3>
+                <p class="contacto-info-text">Completa el formulario y nuestro equipo se pondra en contacto contigo en las proximas 48 horas habiles.</p>
+                <div class="contacto-dato">
+                    <div class="contacto-dato-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <span class="contacto-dato-text">distribuidores@kingstar.mx</span>
+                </div>
+                <div class="contacto-dato">
+                    <div class="contacto-dato-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                    <span class="contacto-dato-text">+52 (33) 1234-5678</span>
+                </div>
+                <div class="contacto-dato">
+                    <div class="contacto-dato-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <span class="contacto-dato-text">Zapopan, Jalisco, Mexico</span>
+                </div>
+            </div>
+
+            <div class="contacto-form-card">
+                <h3 class="contacto-form-title">Informacion del solicitante</h3>
+                <form class="form-grid" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label class="form-label">Nombre de la empresa</label>
+                        <input class="form-input" type="text" placeholder="Empresa S.A. de C.V.">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nombre de contacto</label>
+                        <input class="form-input" type="text" placeholder="Nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Correo electronico</label>
+                        <input class="form-input" type="email" placeholder="correo@empresa.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Telefono</label>
+                        <input class="form-input" type="tel" placeholder="+52 (33) 0000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ciudad / Estado</label>
+                        <input class="form-input" type="text" placeholder="Guadalajara, Jalisco">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Tipo de negocio</label>
+                        <select class="form-select">
+                            <option value="">Selecciona una opcion</option>
+                            <option>Venta de equipo para restaurantes</option>
+                            <option>Proveedor para hoteles</option>
+                            <option>Distribuidor gastronomico</option>
+                            <option>Instalador de cocinas industriales</option>
+                            <option>Comercializador de equipo industrial</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Anos en el mercado</label>
+                        <select class="form-select">
+                            <option value="">Selecciona</option>
+                            <option>Menos de 1 ano</option>
+                            <option>1 - 3 anos</option>
+                            <option>3 - 5 anos</option>
+                            <option>5 - 10 anos</option>
+                            <option>Mas de 10 anos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Sitio web (opcional)</label>
+                        <input class="form-input" type="url" placeholder="https://www.tuempresa.com">
+                    </div>
+                    <div class="form-group full">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-textarea" placeholder="Cuentanos sobre tu negocio y por que te interesa distribuir Kingstar..."></textarea>
+                    </div>
+                    <div class="form-group full">
+                        <button class="form-submit" type="submit">Enviar solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section class="confianza section-padding">
+        <p class="confianza-text">Forma parte de nuestra red de distribuidores y lleva equipos de cocina profesional a mas negocios en Mexico.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <img src="LOGOS GENERAL completo (7).png" alt="KingStar" style="height: 56px; width: auto;">
+        </div>
+        <span class="footer-copy">&copy; 2026 Kingstar. Grupo Kingstrong. Todos los derechos reservados.</span>
+        <div class="footer-links">
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
